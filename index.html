@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setlist — playlist-pitching CRM by Cumulative Web Inc.</title>
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: system-ui, sans-serif; background: #0e0f14; color: #e8e8ee; margin: 0; padding: 2rem; line-height: 1.5; }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header { display: flex; gap: 1.25rem; align-items: center; margin-bottom: 1.5rem; }
+  header img { width: 96px; height: 96px; border-radius: 50%; }
+  h1 { margin: 0 0 .25rem; } .sub { color: #9a9aa8; }
+  pre { background: #14151c; border: 1px solid #2c2c38; border-radius: 8px; padding: 1rem; overflow-x: auto; font-size: .85rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .card { background: #14151c; border: 1px solid #2c2c38; border-radius: 10px; padding: 1rem; }
+  .card h3 { margin: 0 0 .4rem; font-size: 1rem; }
+  .card p { margin: 0; font-size: .85rem; color: #c9c9d6; }
+  .honest { border-left: 3px solid #d4a017; padding-left: 1rem; color: #c9c9d6; font-size: .9rem; margin: 1.5rem 0; }
+  footer { margin-top: 2.5rem; color: #9a9aa8; font-size: .8rem; }
+  a { color: #7fd4ff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <img src="logo.jpg" alt="Cumulative Web Inc. logo">
+  <div>
+    <h1>Setlist</h1>
+    <div class="sub">Playlist-pitching CRM + scan-verified placement tracker. A Cumulative Web Inc. product. Zero dependencies, Node ≥ 20.</div>
+  </div>
+</header>
+
+<p>The doctrine, in one line: <strong>the tool tracks, reminds, and verifies — it never auto-sends.</strong>
+Everything CWI runs manually to pitch tracks — curator CRM, submission threads, scan-verified placement
+proofs, follow-up scheduling — as real software.</p>
+
+<h2>Try it</h2>
+<pre>git clone https://github.com/CumulativeWebInc/setlist.git
+cd setlist
+node seed.js                 # seed the real CWI dogfood corpus (60 curators, 35 pitches)
+node setlist.js report       # pitches, placements, curator reply stats
+node setlist.js queue        # today's follow-ups (capped at 20/day)
+node setlist.js verify &lt;playlist_url&gt; &lt;track_id&gt; --file snapshot.json
+npm test                     # 84 tests, node:test, zero deps</pre>
+
+<div class="grid">
+  <div class="card"><h3>Curator CRM</h3><p>Verified curator records — submission paths, reply history, payola flags. Paid placement routes are flagged and <em>never pitched</em>.</p></div>
+  <div class="card"><h3>Evidence or it didn't happen</h3><p>A placement needs a playlist URL <em>plus</em> a receipt. Link-first, scan-second. Unverified claims are rejected by the data layer, not by policy.</p></div>
+  <div class="card"><h3>Anti-spam governor</h3><p>One pitch per (curator, track), 2 follow-ups max ≥7 days apart, 20 outbound actions/day cap, one polite touch per thread.</p></div>
+  <div class="card"><h3>Crash-safe store</h3><p>Flat JSON envelopes, tmp-file → fsync → atomic rename. A corrupt file fails closed and loud.</p></div>
+</div>
+
+<div class="honest">
+  <strong>Honest limits.</strong> Setlist records sends — it performs none. Playlist scans use snapshots you provide;
+  it does not scrape Spotify. The seeded corpus is CWI's real 2026-09-14/15 operation; external results will vary.
+  Free-submission routes only, always.
+</div>
+
+<footer>
+  Built by Cumulative Web Inc. · Contact: <a href="mailto:hp@cumulativeweb.com">hp@cumulativeweb.com</a><br>
+  © 2026 Cumulative Web Inc. Free to use with attribution; commercial licensing via hp@cumulativeweb.com.
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+  {
+    "file": "eric-alper-360.json",
+    "playlist_url": "https://open.spotify.com/playlist/0hsLLFaADDjU54tFqaImFh",
+    "playlist_name": "360° : The Best Indie Music (Eric Alper)",
+    "total": 216,
+    "expect": [
+      {
+        "track_id": "zooted-zone",
+        "spotify_id": "0emH8ktA8x4DkOFLsG5xkW",
+        "position": 216,
+        "total": 216
+      }
+    ]
+  },
+  {
+    "file": "audiartist-new-rap-hits.json",
+    "playlist_url": "https://open.spotify.com/playlist/5zhnSpZqKRRaOvRMWuT0bL",
+    "playlist_name": "New Rap Hits (Audiartist)",
+    "total": 105,
+    "expect": [
+      {
+        "track_id": "shaka-zulu",
+        "spotify_id": "3pQEzg7xFqGIk0CK1Za1Kw",
+        "position": 21,
+        "total": 105
+      },
+      {
+        "track_id": "zooted-zone",
+        "spotify_id": "0emH8ktA8x4DkOFLsG5xkW",
+        "position": 30,
+        "total": 105
+      },
+      {
+        "track_id": "doves-diamonds",
+        "spotify_id": "4NAyd7rvnuG3DrPFqXo4eQ",
+        "position": 31,
+        "total": 105
+      }
+    ]
+  },
+  {
+    "file": "dj-6rings-its-goin.json",
+    "playlist_url": "https://open.spotify.com/playlist/1aKBRGOS2ZOMiKwleCd9KV",
+    "playlist_name": "It's Goin (DJ 6Rings)",
+    "total": 40,
+    "expect": [
+      {
+        "track_id": "flex-my-flame",
+        "spotify_id": "3knXIxd0PlraXvarlwGwKm",
+        "position": 7,
+        "total": 40
+      }
+    ]
+  }
+]
